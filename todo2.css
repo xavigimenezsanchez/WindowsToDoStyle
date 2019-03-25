@@ -1,0 +1,19 @@
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+li {
+    list-style: none;
+}
+.toggle::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+}
+
+.toggle:checked::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    color: green;
+    font-weight: 900;
+}
