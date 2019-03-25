@@ -23,7 +23,7 @@ li {
     font-family: "Font Awesome 5 Free";
     color: green;
     font-weight: 900;
-    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97);
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97);
 }
 
 
