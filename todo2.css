@@ -2,6 +2,9 @@ input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
 }
+input[type="checkbox"]:focus{
+    outline:0;
+}
 
 li {
     list-style: none;
@@ -10,10 +13,40 @@ li {
     content: "\f111";
     font-family: "Font Awesome 5 Free";
 }
-
+.toggle:checked {
+    background: none;
+    border: 0;
+}
 .toggle:checked::before {
     content: "\f058";
+    display: block;
     font-family: "Font Awesome 5 Free";
     color: green;
     font-weight: 900;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97);
 }
+
+
+  @keyframes shake {
+    45% {
+        transform: scale(1.3);
+    }
+    10%, 90% {
+      transform: rotateZ(10deg);
+    }
+    
+    20%, 80% {
+      transform: rotateZ(0deg);
+    }
+  
+    30%, 50%, 70% {
+      transform: rotateZ(-10deg);
+    }
+  
+    40%, 60% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
